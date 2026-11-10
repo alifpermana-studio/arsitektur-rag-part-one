@@ -1,0 +1,32 @@
+00:00.800 --> 00:04.650
+Bencana kedua menghantam langsung ke jantung infrastruktur server.
+
+00:05.600 --> 00:07.800
+Banyak yang menggabungkan proses unggah berkas PDF,
+
+00:07.850 --> 00:09.050
+ekstraksi teks,
+
+00:09.150 --> 00:10.450
+pembuatan vektor,
+
+00:10.550 --> 00:14.000
+hingga jalur tool calling di dalam satu aplikasi Node.js monolitik.
+
+00:14.650 --> 00:19.100
+Padahal, membongkar PDF ratusan halaman itu sangat rakus CPU.
+
+00:19.850 --> 00:22.000
+Begitu ada lima pengguna mengunggah dokumen bersamaan,
+
+00:22.100 --> 00:25.200
+jalur tunggal event loop di server langsung terkunci rapat.
+
+00:25.950 --> 00:30.300
+Akibatnya, saat agen AI milik pengguna lain mencoba memanggil tool pencarian database,
+
+00:30.750 --> 00:33.650
+permintaan mereka menabrak pintu server yang membeku
+
+00:33.750 --> 00:36.050
+dan berakhir dengan layar merah Gateway Timeout.

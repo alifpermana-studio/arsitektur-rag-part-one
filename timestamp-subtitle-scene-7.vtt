@@ -1,0 +1,23 @@
+00:00.300 --> 00:03.350
+Untuk membangun sistem RAG kelas produksi yang tahan banting,
+
+00:03.700 --> 00:08.700
+kita wajib membuang arsitektur monolitik dan membelah sistem menjadi dua pipa microservice yang terisolasi.
+
+00:09.600 --> 00:13.100
+Pipa pertama adalah jalur ingestion asinkron di latar belakang,
+
+00:13.500 --> 00:17.400
+yang dikendalikan antrean Redis BullMQ dan pekerja Express.js
+
+00:17.600 --> 00:22.700
+untuk mengekstrak PDF, menyuntikkan konteks dokumen, serta melabeli metadata otomatis.
+
+00:23.600 --> 00:26.900
+Pipa kedua adalah jalur kueri hibrida berkecepatan tinggi,
+
+00:27.200 --> 00:31.700
+yang khusus melayani panggilan tool-calling lewat memori kilat semantic cache Redis,
+
+00:31.900 --> 00:35.900
+serta pencarian gabungan kata kunci dan vektor di PostgreSQL pgvector.

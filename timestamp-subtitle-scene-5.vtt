@@ -1,0 +1,29 @@
+00:00.250 --> 00:05.750
+Sayangnya, saat developer mencoba membuat sendiri alat RAG ini dengan cara dasar atau Naive RAG,
+
+00:05.900 --> 00:08.400
+dua bencana besar langsung mengintai.
+
+00:08.750 --> 00:11.500
+Bencana pertama adalah amnesia konteks.
+
+00:12.100 --> 00:15.200
+Demi memotong dokumen panjang menjadi bagian kecil atau chunking,
+
+00:15.400 --> 00:19.700
+banyak developer langsung memotong teks mentah-mentah tanpa menyertakan identitas dokumennya.
+
+00:20.350 --> 00:24.000
+Bayangkan merobek ratusan halaman laporan keuangan dari berbagai tahun,
+
+00:24.100 --> 00:26.500
+lalu mengacaknya di satu kardus.
+
+00:27.200 --> 00:30.300
+Saat AI mencari laba tahun 2025,
+
+00:30.400 --> 00:35.300
+mesin pencari malah mengambil robekan kertas bertuliskan laba naik 18% di kuartal ketiga,
+
+00:35.450 --> 00:38.300
+yang ternyata berasal dari laporan tahun 2021.

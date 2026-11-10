@@ -1,0 +1,75 @@
+================================================================================
+NASKAH VOICEOVER VIDEO TIKTOK (FORMAT VERTIKAL 9:16)
+Judul Proyek : Mengenal RAG, Rahasia Tool Calling AI Modern, & Bencana Naive RAG (Part 1 - Pembuka)
+Format       : 9 Cut Scenes
+================================================================================
+
+### Cut Scene 1 (alifpermana.studio)
+Teks Layar: "Kok Bisa Claude, Gemini, & ChatGPT Paham Isi PDF Rahasiamu Tanpa Dilatih Ulang?!"
+
+Voiceover:
+"Pernah kepikiran nggak, kok bisa platform seperti Claude, Gemini, atau ChatGPT langsung paham isi laporan PDF rahasia perusahaanmu hanya dalam hitungan detik setelah diunggah? Padahal, otak model AI itu punya batas ingatan pelatihan dan sama sekali buta terhadap data internal kita. Kalau kita melatih ulang model atau fine-tuning, itu ibarat menyuruh mahasiswa menghafal seluruh isi perpustakaan sebelum masuk ruang ujian tertutup—biayanya mahal dan rawan salah ingat. Solusinya adalah RAG, atau Retrieval-Augmented Generation, yang mengubah ujian tadi menjadi ujian buku terbuka berbekal indeks pencarian super cepat."
+
+---
+
+### Cut Scene 2 (azurewot)
+Teks Layar: "RAG Modern Bukan Pencarian Kaku! Kenali Konsep RAG Sebagai Alat (Tool Calling)"
+
+Voiceover:
+"Tapi hati-hati, cara kerja RAG di aplikasi AI modern sudah jauh berevolusi dibandingkan generasi awal. Dulu, sistem RAG bekerja secara membabi buta. Pengguna baru menyapa 'Halo, selamat pagi' saja, server langsung dipaksa membongkar database dokumen lalu menyuapi AI dengan teks acak yang merusak obrolan. Sekarang, sistem Agentic AI menjadikan RAG sebagai alat eksternal melalui mekanisme Tool Calling. Artinya, model AI akan berpikir dulu: kalau cuma disapa, ia langsung menjawab santai; tapi begitu ditanya fakta spesifik, barulah ia menarik tuas pencari dokumen."
+
+---
+
+### Cut Scene 3 (azurestudio.backup)
+Teks Layar: "Bedah 4 Tahap Siklus Tool Calling: Reasoning -> JSON Call -> Retrieval -> Synthesis!"
+
+Voiceover:
+"Bagaimana siklus Tool Calling ini bekerja di balik layar? Semua berjalan lewat empat tahap presisi. Pertama, tahap Reasoning, di mana AI sadar bahwa ia butuh data eksternal untuk menjawab pertanyaanmu. Kedua, Tool Call Emission: AI menahan diri untuk tidak mengarang jawaban, lalu mengeluarkan instruksi JSON terstruktur seperti memanggil fungsi pencarian laporan tahun 2025. Ketiga, Retrieval Execution: mikroservis backend kita menangkap instruksi itu, memindai database vektor, lalu mengembalikan potongan teks faktanya. Keempat, Grounded Synthesis: AI membaca hasil tangkapan tadi lalu merangkai jawaban akurat lengkap dengan nomor halaman rujukan."
+
+---
+
+### Cut Scene 4 (azurestudio.backup1)
+Teks Layar: "Rahasia Claude, Gemini, & ChatGPT: Sebagus Apa Pun AI-nya, Alat RAG Penentunya!"
+
+Voiceover:
+"Mekanisme persis inilah yang menggerakkan fitur Projects dan protokol MCP di Claude, Extensions di Gemini, hingga File Search di ChatGPT. Fakta arsitektural ini membuka satu rahasia besar: secerdas apa pun model penalaran yang kita pakai—mau itu Claude Sonnet, Gemini Pro, atau DeepSeek R1—kualitas jawabannya bergantung seratus persen pada kualitas potongan dokumen yang disodorkan oleh alat RAG kita. Kalau mesin pencari di backend menyuapi potongan dokumen yang salah, maka AI paling pintar di dunia sekalipun pasti akan ikut memberikan jawaban yang sesat."
+
+---
+
+### Cut Scene 5 (azurestudio.backup2)
+Teks Layar: "Bencana #1 Naive RAG: Amnesia Konteks Saat Chunking Bikin AI Salah Mengutip Tahun!"
+
+Voiceover:
+"Sayangnya, saat developer mencoba membuat sendiri alat RAG ini dengan cara dasar atau Naive RAG, dua bencana besar langsung mengintai. Bencana pertama adalah amnesia konteks. Demi memotong dokumen panjang menjadi bagian kecil atau chunking, banyak developer langsung memotong teks mentah-mentah tanpa menyertakan identitas dokumennya. Bayangkan merobek ratusan halaman laporan keuangan dari berbagai tahun lalu mengacaknya di satu kardus. Saat AI mencari laba tahun 2025, mesin pencari malah mengambil robekan kertas bertuliskan 'Laba naik 18 persen di kuartal ketiga' yang ternyata berasal dari laporan tahun 2021."
+
+---
+
+### Cut Scene 6 (alifpustaka.assist)
+Teks Layar: "Bencana #2 Naive RAG: Ekstraksi PDF Mengunci Event Loop Monolitik Hingga Timeout!"
+
+Voiceover:
+"Bencana kedua menghantam langsung ke jantung infrastruktur server. Banyak yang menggabungkan proses unggah berkas PDF, ekstraksi teks, pembuatan vektor, hingga jalur Tool Calling di dalam satu aplikasi Node.js monolitik. Padahal, membongkar PDF ratusan halaman itu sangat rakus CPU. Begitu ada lima pengguna mengunggah dokumen bersamaan, jalur tunggal Event Loop di server langsung terkunci rapat. Akibatnya, saat agen AI milik pengguna lain mencoba memanggil tool pencarian database, permintaan mereka menabrak pintu server yang membeku dan berakhir dengan layar merah Gateway Timeout."
+
+---
+
+### Cut Scene 7 (fajarrini915)
+Teks Layar: "Solusi Production RAG: Pisahkan Pipa Ingestion Asinkron & Pipa Query Hibrida!"
+
+Voiceover:
+"Untuk membangun sistem RAG kelas produksi yang tahan banting, kita wajib membuang arsitektur monolitik dan membelah sistem menjadi dua pipa mikroservis yang terisolasi. Pipa pertama adalah Jalur Ingestion Asinkron di latar belakang, yang dikendalikan antrean Redis BullMQ dan pekerja Express.js untuk mengekstrak PDF, menyuntikkan konteks dokumen, serta melabeli metadata otomatis. Pipa kedua adalah Jalur Query Hibrida berkecepatan tinggi, yang khusus melayani panggilan Tool Calling lewat memori kilat Semantic Cache Redis serta pencarian gabungan kata kunci dan vektor di PostgreSQL pgvector."
+
+---
+
+### Cut Scene 8 (ruhwiyanto278)
+Teks Layar: "Simulasi Head-to-Head: Kegagalan Naive RAG vs Akurasi Presisi Production RAG!"
+
+Voiceover:
+"Perbedaan kedua arsitektur ini terlihat kontras saat kita uji di atas simulasi lalu lintas data. Pada mode Naive RAG, panggilan fungsi dari agen AI langsung tersendat oleh antrean unggah berkas dan hanya memulangkan potongan kalimat buta tanpa keterangan tahun, sehingga memicu halusinasi. Sebaliknya, saat kita beralih ke mode Production RAG, Express.js langsung menembus jalur bebas hambatan, menyaring atribut metadata tahun 2025 secara instan di indeks GIN PostgreSQL, lalu memulangkan kutipan utuh lengkap dengan konteks bab dan nomor halaman hanya dalam 25 milidetik."
+
+---
+
+### Cut Scene 9 (alifpermana.studio)
+Teks Layar: "Lanjut Part 2: Menjalankan 5 Kontainer Mikroservis RAG di VPS 4 GB RAM Tanpa OOMKilled!"
+
+Voiceover:
+"Sekarang cetak biru Production RAG kita sudah jelas: kita butuh kontainer terpisah untuk antarmuka Next.js, orkestrator Express.js, antrean dan cache Redis, database PostgreSQL pgvector, serta Reverse Proxy. Tapi masalah baru langsung muncul di depan mata: bagaimana cara menjalankan kelima layanan mikroservis ini di dalam satu VPS murah berkapasitas 4 gigabita RAM tanpa mati mendadak karena kehabisan memori? Di bagian kedua, kita akan bedah tuntas topologi Docker Compose dan strategi pembagian RAM-nya agar server tetap dingin."

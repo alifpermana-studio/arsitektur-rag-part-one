@@ -1,0 +1,38 @@
+00:00.080 --> 00:01.120
+Tapi hati-hati,
+
+00:01.350 --> 00:03.950
+cara kerja RAG di aplikasi AI modern
+
+00:04.100 --> 00:06.650
+sudah jauh berevolusi dibandingkan generasi awal.
+
+00:07.500 --> 00:10.600
+Dulu, sistem RAG bekerja secara membabi buta.
+
+00:11.750 --> 00:14.500
+Pengguna baru menyapa, "Halo, selamat pagi" saja,
+
+00:14.650 --> 00:17.200
+server langsung dipaksa membongkar database dokumen,
+
+00:17.400 --> 00:20.250
+lalu menyuapi AI dengan teks acak yang merusak obrolan.
+
+00:21.500 --> 00:24.300
+Sekarang, sistem Agentic AI menjadikan RAG
+
+00:24.350 --> 00:26.850
+sebagai alat eksternal melalui mekanisme tool calling.
+
+00:27.800 --> 00:29.850
+Artinya, model AI akan berpikir dulu.
+
+00:30.250 --> 00:32.400
+Kalau cuma disapa, ya langsung menjawab santai.
+
+00:32.600 --> 00:34.500
+Tapi begitu ditanya fakta spesifik,
+
+00:34.700 --> 00:36.750
+barulah ia menarik tuas pencari dokumen.

@@ -1,0 +1,20 @@
+00:00.080 --> 00:05.500
+Perbedaan kedua arsitektur ini terlihat kontras saat kita uji di atas simulasi lalu lintas data.
+
+00:07.100 --> 00:12.350
+Pada mode Naive RAG, panggilan fungsi dari agen AI langsung tersendat oleh antrean unggah berkas,
+
+00:12.350 --> 00:17.400
+dan hanya memulangkan potongan kalimat buta tanpa keterangan tahun, sehingga memicu halusinasi.
+
+00:18.000 --> 00:21.800
+Sebaliknya, saat kita beralih ke mode Production RAG,
+
+00:22.350 --> 00:25.300
+Express.js langsung menembus jalur bebas hambatan,
+
+00:25.400 --> 00:30.900
+menyaring atribut metadata tahun 2025 secara instan di indeks GIN PostgreSQL,
+
+00:31.450 --> 00:36.100
+lalu memulangkan kutipan utuh lengkap dengan konteks bab dan nomor halaman hanya dalam 25 milidetik.

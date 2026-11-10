@@ -1,0 +1,23 @@
+00:00.120 --> 00:04.850
+Mekanisme persis inilah yang menggerakkan fitur Projects dan protokol MCP di Claude,
+
+00:04.980 --> 00:08.680
+Extensions di Gemini, hingga File Search di ChatGPT.
+
+00:09.650 --> 00:12.650
+Fakta arsitektural ini membuka satu rahasia besar.
+
+00:13.350 --> 00:15.150
+Secerdas apa pun model penalaran yang kita pakai,
+
+00:15.250 --> 00:18.450
+mau itu Claude Sonnet, Gemini Pro, atau DeepSeek R1,
+
+00:18.750 --> 00:24.100
+kualitas jawabannya bergantung 100% pada kualitas potongan dokumen yang disodorkan oleh alat RAG kita.
+
+00:25.150 --> 00:27.950
+Kalau mesin pencari di back-end menyuapi potongan dokumen yang salah,
+
+00:28.250 --> 00:32.850
+maka AI paling pintar di dunia sekali pun pasti akan ikut memberikan jawaban yang sesat.

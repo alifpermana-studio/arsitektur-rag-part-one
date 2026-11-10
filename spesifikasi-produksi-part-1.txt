@@ -1,0 +1,129 @@
+================================================================================
+SPESIFIKASI PRODUKSI VIDEO TIKTOK (FORMAT VERTIKAL 9:16)
+Judul Proyek : Mengenal RAG, Rahasia Tool Calling AI Modern, & Bencana Naive RAG (Part 1 - Pembuka)
+Format       : 9 Cut Scenes
+================================================================================
+
+### Cut Scene 1 (alifpermana.studio)
+
+Judul Proyek: Mengenal RAG, Rahasia Tool Calling di Balik AI Modern, dan Mengapa Naive RAG Bikin Server Lumpuh (Bagian 1 dari 10 Seri Masterclass Arsitektur RAG).
+
+Pendekatan Materi: Memadukan Analogi Ujian Buku Terbuka vs Menghafal Perpustakaan dan Analogi Robekan Kertas Tanpa Judul di Kardus dengan bedah mekanisme JSON Tool Calling, penguncian Event Loop Node.js, serta pemisahan pipa mikroservis.
+
+Tujuan Komunikasi: Menarik perhatian penonton dengan membongkar rahasia bagaimana platform AI modern mampu menjawab isi dokumen PDF rahasia perusahaan secara instan tanpa melalui proses Fine-Tuning yang mahal.
+
+Spesifikasi Visual: Bagian atas menampilkan antarmuka chat AI modern yang langsung berhasil menjawab detail laporan keuangan dari berkas PDF yang baru diunggah 5 detik lalu. Bagian bawah menampilkan komparasi visual dua metode: sebelah kiri adalah Fine-Tuning (mahasiswa kelelahan menghafal ribuan buku perpustakaan sebelum masuk ruang ujian tertutup karena terhalang tembok Knowledge Cutoff), dan sebelah kanan adalah RAG atau Retrieval-Augmented Generation (mahasiswa santai mengikuti ujian buku terbuka berbekal kamus indeks untuk mengutip halaman secara presisi).
+
+Teks Layar (Hook): "Kok Bisa Claude, Gemini, & ChatGPT Paham Isi PDF Rahasiamu Tanpa Dilatih Ulang?!"
+
+---
+
+### Cut Scene 2 (azurewot)
+
+Judul Proyek: Mengenal RAG, Rahasia Tool Calling di Balik AI Modern, dan Mengapa Naive RAG Bikin Server Lumpuh (Bagian 1 dari 10 Seri Masterclass Arsitektur RAG).
+
+Pendekatan Materi: Memadukan Analogi Ujian Buku Terbuka vs Menghafal Perpustakaan dan Analogi Robekan Kertas Tanpa Judul di Kardus dengan bedah mekanisme JSON Tool Calling, penguncian Event Loop Node.js, serta pemisahan pipa mikroservis.
+
+Tujuan Komunikasi: Menjelaskan evolusi dari sistem RAG generasi awal yang kaku (selalu memaksa pencarian database untuk setiap pesan) menuju arsitektur Agentic AI yang memosisikan RAG sebagai alat eksternal melalui Tool Calling.
+
+Spesifikasi Visual: Layar atas memperlihatkan kegagalan RAG kaku generasi lama: pengguna hanya menyapa "Halo, selamat pagi!", namun server langsung memindai database vektor dan menyuapi AI dengan potongan dokumen pajak yang merusak obrolan. Layar bawah menampilkan alur cerdas Agentic RAG: agen AI memeriksa niat pesan terlebih dahulu, membalas sapaan secara langsung tanpa menyentuh database, dan baru menarik tuas Tool Calling ketika pengguna menanyakan angka spesifik di dalam laporan.
+
+Teks Layar: "RAG Modern Bukan Pencarian Kaku! Kenali Konsep RAG Sebagai Alat (Tool Calling)"
+
+---
+
+### Cut Scene 3 (azurestudio.backup)
+
+Judul Proyek: Mengenal RAG, Rahasia Tool Calling di Balik AI Modern, dan Mengapa Naive RAG Bikin Server Lumpuh (Bagian 1 dari 10 Seri Masterclass Arsitektur RAG).
+
+Pendekatan Materi: Memadukan Analogi Ujian Buku Terbuka vs Menghafal Perpustakaan dan Analogi Robekan Kertas Tanpa Judul di Kardus dengan bedah mekanisme JSON Tool Calling, penguncian Event Loop Node.js, serta pemisahan pipa mikroservis.
+
+Tujuan Komunikasi: Membedah 4 tahapan teknis siklus hidup Tool Calling (Reasoning, Tool Call Emission, Retrieval Execution, dan Grounded Synthesis) saat agen AI berinteraksi dengan backend pencarian.
+
+Spesifikasi Visual: Diagram sekuens vertikal 4 tahap yang menyala berurutan mengikuti aliran paket data: 1. Reasoning (LLM mendeteksi perlunya data dokumen internal), 2. Tool Call Emission (LLM menahan diri tidak menjawab dan mengeluarkan payload JSON `search_company_docs(query="kenaikan laba Q3", year=2025)`), 3. Retrieval Execution (mikroservis backend memindai database vektor dan mengembalikan paket `tool_result`), dan 4. Grounded Synthesis (LLM merangkai jawaban akurat lengkap dengan lencana sitasi halaman).
+
+Teks Layar: "Bedah 4 Tahap Siklus Tool Calling: Reasoning -> JSON Call -> Retrieval -> Synthesis!"
+
+---
+
+### Cut Scene 4 (azurestudio.backup1)
+
+Judul Proyek: Mengenal RAG, Rahasia Tool Calling di Balik AI Modern, dan Mengapa Naive RAG Bikin Server Lumpuh (Bagian 1 dari 10 Seri Masterclass Arsitektur RAG).
+
+Pendekatan Materi: Memadukan Analogi Ujian Buku Terbuka vs Menghafal Perpustakaan dan Analogi Robekan Kertas Tanpa Judul di Kardus dengan bedah mekanisme JSON Tool Calling, penguncian Event Loop Node.js, serta pemisahan pipa mikroservis.
+
+Tujuan Komunikasi: Memetakan implementasi Tool Calling RAG pada claude.ai, gemini.google.com, dan chatgpt.com sekaligus menegaskan bahwa kecerdasan LLM tidak berguna jika alat RAG menyodorkan potongan data yang salah.
+
+Spesifikasi Visual: Layar atas menampilkan matriks perbandingan 4 baris: claude.ai (Projects & MCP Server), gemini.google.com (Workspace Extensions & Gems), chatgpt.com (File Search), dan Mikroservis Kita (Express.js + pgvector + Redis). Layar bawah menampilkan ilustrasi otak AI raksasa (Claude 3.5 Sonnet / DeepSeek-R1) yang disuapi dokumen sampah oleh robot kurir RAG yang rusak, sehingga menghasilkan jawaban yang ikut sesat.
+
+Teks Layar: "Rahasia Claude, Gemini, & ChatGPT: Sebagus Apa Pun AI-nya, Alat RAG Penentunya!"
+
+---
+
+### Cut Scene 5 (azurestudio.backup2)
+
+Judul Proyek: Mengenal RAG, Rahasia Tool Calling di Balik AI Modern, dan Mengapa Naive RAG Bikin Server Lumpuh (Bagian 1 dari 10 Seri Masterclass Arsitektur RAG).
+
+Pendekatan Materi: Memadukan Analogi Ujian Buku Terbuka vs Menghafal Perpustakaan dan Analogi Robekan Kertas Tanpa Judul di Kardus dengan bedah mekanisme JSON Tool Calling, penguncian Event Loop Node.js, serta pemisahan pipa mikroservis.
+
+Tujuan Komunikasi: Membongkar bencana pertama saat developer membangun sendiri alat RAG dengan cara dasar (Naive RAG), yaitu hilangnya konteks global akibat pemotongan teks mentah (Amnesia Konteks saat Chunking).
+
+Spesifikasi Visual: Animasi gunting yang memotong laporan keuangan PDF menjadi ratusan robekan kalimat kecil tanpa judul dokumen atau tahun terbit, lalu memasukkannya ke dalam satu kardus besar. Saat agen AI memanggil tool untuk mencari "Laba bersih tahun 2025", tangan pencari mengambil robekan kertas bertuliskan "Laba bersih naik 18% di kuartal ketiga" yang ternyata berasal dari dokumen tahun 2021 tanpa diketahui oleh AI.
+
+Teks Layar: "Bencana #1 Naive RAG: Amnesia Konteks Saat Chunking Bikin AI Salah Mengutip Tahun!"
+
+---
+
+### Cut Scene 6 (alifpustaka.assist)
+
+Judul Proyek: Mengenal RAG, Rahasia Tool Calling di Balik AI Modern, dan Mengapa Naive RAG Bikin Server Lumpuh (Bagian 1 dari 10 Seri Masterclass Arsitektur RAG).
+
+Pendekatan Materi: Memadukan Analogi Ujian Buku Terbuka vs Menghafal Perpustakaan dan Analogi Robekan Kertas Tanpa Judul di Kardus dengan bedah mekanisme JSON Tool Calling, penguncian Event Loop Node.js, serta pemisahan pipa mikroservis.
+
+Tujuan Komunikasi: Membongkar bencana kedua pada Naive RAG di level infrastruktur, yaitu lumpuhnya server monolitik ketika proses unggah dan ekstraksi PDF digabungkan satu atap dengan endpoint pelayanan chat dan Tool Calling.
+
+Spesifikasi Visual: Layar atas menampilkan satu kontainer Node.js monolitik yang dipaksa menangani 5 pengguna yang mengunggah berkas PDF ratusan halaman secara bersamaan. Grafik CPU langsung melonjak ke 100% dan jalur tunggal Event Loop tergembok rapat oleh proses ekstraksi teks. Layar bawah menampilkan dampaknya: ketika agen AI milik pengguna lain mencoba memanggil endpoint Tool Calling untuk mencari data, permintaan mereka menabrak pintu yang terkunci hingga memunculkan layar merah 504 Gateway Timeout.
+
+Teks Layar: "Bencana #2 Naive RAG: Ekstraksi PDF Mengunci Event Loop Monolitik Hingga Timeout!"
+
+---
+
+### Cut Scene 7 (fajarrini915)
+
+Judul Proyek: Mengenal RAG, Rahasia Tool Calling di Balik AI Modern, dan Mengapa Naive RAG Bikin Server Lumpuh (Bagian 1 dari 10 Seri Masterclass Arsitektur RAG).
+
+Pendekatan Materi: Memadukan Analogi Ujian Buku Terbuka vs Menghafal Perpustakaan dan Analogi Robekan Kertas Tanpa Judul di Kardus dengan bedah mekanisme JSON Tool Calling, penguncian Event Loop Node.js, serta pemisahan pipa mikroservis.
+
+Tujuan Komunikasi: Memperkenalkan cetak biru arsitektur Production RAG yang membelah sistem menjadi dua jalur pipa independen di atas kontainer mikroservis agar bebas hambatan dan akurat.
+
+Spesifikasi Visual: Bagan topologi vertikal yang membelah arsitektur menjadi dua jalur terisolasi. Jalur Kiri adalah Pipa Ingestion Asinkron: antrean Redis BullMQ dan Worker Express.js yang mengekstrak PDF di latar belakang, menyuntikkan Contextual Embedding, dan melabeli metadata JSONB secara otomatis. Jalur Kanan adalah Pipa Query Hibrida (Endpoint Tool RAG): jalur cepat yang melayani panggilan agen AI melalui Semantic Cache Redis, indeks metadata GIN, serta pencarian gabungan kata kunci dan vektor HNSW di PostgreSQL pgvector.
+
+Teks Layar: "Solusi Production RAG: Pisahkan Pipa Ingestion Asinkron & Pipa Query Hibrida!"
+
+---
+
+### Cut Scene 8 (ruhwiyanto278)
+
+Judul Proyek: Mengenal RAG, Rahasia Tool Calling di Balik AI Modern, dan Mengapa Naive RAG Bikin Server Lumpuh (Bagian 1 dari 10 Seri Masterclass Arsitektur RAG).
+
+Pendekatan Materi: Memadukan Analogi Ujian Buku Terbuka vs Menghafal Perpustakaan dan Analogi Robekan Kertas Tanpa Judul di Kardus dengan bedah mekanisme JSON Tool Calling, penguncian Event Loop Node.js, serta pemisahan pipa mikroservis.
+
+Tujuan Komunikasi: Menunjukkan bukti visual melalui simulasi interaktif perbandingan antara alur Naive RAG yang gagal menangkap konteks melawan Production RAG yang mengembalikan data terstruktur dalam hitungan milidetik.
+
+Spesifikasi Visual: Rekaman layar vertikal dari simulasi diagram interaktif "Siklus Agentic RAG & Tool Calling". Saat sakelar berada di mode Naive RAG, panggilan fungsi pencarian terhambat oleh antrean unggah PDF dan mengembalikan teks mentah tanpa keterangan tahun sehingga memicu peringatan halusinasi merah. Saat sakelar diubah ke mode Production RAG, Express.js langsung memeriksa Semantic Cache Redis, menyaring metadata JSONB tahun 2025 di PostgreSQL pgvector, dan mengembalikan potongan teks lengkap dengan Context Prefix serta nomor halaman dalam 25 milidetik.
+
+Teks Layar: "Simulasi Head-to-Head: Kegagalan Naive RAG vs Akurasi Presisi Production RAG!"
+
+---
+
+### Cut Scene 9 (azureassecret)
+
+Judul Proyek: Mengenal RAG, Rahasia Tool Calling di Balik AI Modern, dan Mengapa Naive RAG Bikin Server Lumpuh (Bagian 1 dari 10 Seri Masterclass Arsitektur RAG).
+
+Pendekatan Materi: Memadukan Analogi Ujian Buku Terbuka vs Menghafal Perpustakaan dan Analogi Robekan Kertas Tanpa Judul di Kardus dengan bedah mekanisme JSON Tool Calling, penguncian Event Loop Node.js, serta pemisahan pipa mikroservis.
+
+Tujuan Komunikasi: Merangkum daftar kontainer mikroservis yang dibutuhkan oleh Production RAG sekaligus memancing rasa penasaran penonton untuk mengikuti Episode 2 tentang manajemen memori di VPS 4 GB RAM.
+
+Spesifikasi Visual: Montase transisi dari diagram dua pipa Production RAG menuju layar terminal Linux yang menampilkan 5 kontainer Docker (Next.js, Express.js, PostgreSQL pgvector, Redis, dan Reverse Proxy) di dalam VPS berspesifikasi 4 GB RAM dan 2 vCPU. Sebuah indikator alarm merah OOMKilled muncul ketika model embedding lokal berukuran 2,2 GB dipaksa masuk ke dalam RAM yang terbatas, diikuti penanda lanjut ke Bagian 2.
+
+Teks Layar: "Lanjut Part 2: Menjalankan 5 Kontainer Mikroservis RAG di VPS 4 GB RAM Tanpa OOMKilled!"

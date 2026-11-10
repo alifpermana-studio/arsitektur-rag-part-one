@@ -1,0 +1,41 @@
+00:00.200 --> 00:01.300
+Pernah kepikiran nggak,
+
+00:01.350 --> 00:05.350
+kok bisa platform seperti Claude, Gemini, atau ChatGPT
+
+00:05.400 --> 00:08.300
+langsung paham isi laporan PDF rahasia perusahaanmu
+
+00:08.300 --> 00:10.600
+hanya dalam hitungan detik setelah diunggah?
+
+00:11.600 --> 00:15.300
+Padahal, otak model AI itu punya batas ingatan pelatihan
+
+00:15.350 --> 00:18.000
+dan sama sekali buta terhadap data internal kita.
+
+00:18.800 --> 00:21.000
+Kalau kita melatih ulang model atau fine-tuning,
+
+00:21.050 --> 00:24.100
+itu ibarat menyuruh mahasiswa menghafal seluruh isi perpustakaan
+
+00:24.150 --> 00:25.850
+sebelum masuk ruang ujian tertutup.
+
+00:26.100 --> 00:28.000
+Biayanya mahal dan rawan salah ingat.
+
+00:28.400 --> 00:30.500
+Solusinya adalah RAG
+
+00:30.800 --> 00:33.500
+atau Retrieval-Augmented Generation,
+
+00:33.800 --> 00:36.500
+yang mengubah ujian tadi menjadi ujian buku terbuka
+
+00:36.550 --> 00:39.000
+berbekal indeks pencarian super cepat.

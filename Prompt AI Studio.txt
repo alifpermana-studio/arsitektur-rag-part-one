@@ -1,0 +1,82 @@
+### PERAN & TUJUAN UTAMA
+Kamu bertugas menggabungkan seluruh file HTML cutscene motion graphic yang ada di project ini menjadi **SATU file HTML utuh mandiri (`Full.html`)**, sekaligus merapikan simetrinya dan menyamakan tema warnanya tanpa mengubah isi visual maupun animasi bawaannya.
+
+---
+
+### 1. ATURAN KERAS ARSITEKTUR (WAJIB DITAATI — DILARANG MELANGGAR)
+1. **HANYA SINGLE-FILE VANILLA HTML5:**
+   - Output **WAJIB** berupa file `.html` tunggal mandiri (*self-contained*) yang menggunakan Vanilla JavaScript + HTML5 `<canvas>` 2D + Web Audio API, persis seperti arsitektur file HTML cutscene asli.
+   - **DILARANG KERAS** membuat proyek TypeScript (`.ts` / `.tsx`), React, Vite, Node.js, `package.json`, `tsconfig.json`, modul ES eksternal, atau *framework* apa pun.
+2. **PERTAHANKAN SPESIFIKASI KANVAS & VIDEO:**
+   - Pertahankan resolusi vertikal **9:16 (`width="1080" height="1920"`)** dan frame rate **30 FPS**.
+   - Pertahankan fitur kontrol pemutar bawaan: tombol `Play/Pause`, `Reset`, slider *seekbar*, tombol loncat antar-scene (`Scene 1`..`Scene N` + `Outro`), *toggle checkbox* (`Narasi`, `Musik`, `Efek`, `Subtitle`), tombol unduh `.srt`, dan tombol `Download Video (MP4)` menggunakan `Mediabunny` + `MediaRecorder` *fallback*.
+
+---
+
+### 2. ATURAN KERAS PRESERVASI ANIMASI BAWAAN & PERBAIKAN SIMETRI
+1. **WAJIB MENGGUNAKAN KODE ANIMASI BAWAAN DARI FILE HTML PARTISI (JANGAN MENGARANG ULANG!):**
+   - **DILARANG KERAS** mengganti, menghapus, menyederhanakan, atau membuat ulang *shape*, objek karakter/ikon, elemen diagram, teks layar, *keyframe*, maupun kurva *easing* yang sudah ada di masing-masing file HTML scene/partisi.
+   - Pindahkan fungsi gambar dan *timeline* asli dari setiap file HTML partisi ke dalam *namespace*/fungsi per scene (misal `renderScene1(g, localT, voDur, showSub)`, `renderScene2(...)`, dst.) agar tidak terjadi bentrok nama variabel global (`t`, `D`, `K`, `CUES`, `draw`, dll.).
+2. **PERBAIKAN SIMETRI (SHAPE, PARTICLES, LINE, TRANSITION, MOTION):**
+   - **Perhatikan bahwa ada beberapa shape, particles, line, transition, motion, dan aspek lain yang berantakan dan tidak simetris. Aku ingin kamu memperbaikinya agar terlihat simetris.**
+   - Cara memperbaikinya **WAJIB** dengan merapikan koordinat (`x`, `y`, lebar/tinggi, jarak antar-elemen, serta titik awal/akhir garis & partikel) pada objek bawaan tersebut—**BUKAN** dengan mengganti objeknya dengan bentuk baru:
+     - Pastikan seluruh tata letak kartu, gedung, karakter, grup *badge*, dan diagram **simetris terhadap sumbu tengah kanvas (`x = 540` pada koordinat `1080×1920`, atau `x = 270` jika scene menggunakan `scale(2, 2)`)** dengan margin kiri dan kanan yang seimbang.
+     - Rapikan jalur *line* (garis konektor/panah) dan aliran *particles* agar titik berangkat dan titik tujuannya tepat di tengah *node*/objek yang dihubungkan serta bercabang secara simetris.
+     - Rapikan *transition* (seperti *radial wipe* / lingkaran transisi) agar selalu berpusat tepat di tengah kanvas (`(540, 960)` atau `(270, 480)`) dan *motion* masuk/keluar bergerak mulus tanpa posisi miring/timpang.
+     - Pengecualian khusus untuk elemen *progress bar* atau *horizontal gauge bar* yang menunjukkan persentase kapasitas: pastikan animasi pengisian bar bergerak **rata kiri** di dalam *track*-nya (bukan melebar dari tengah), sedangkan kotak *track* luarnya tetap berada di tengah kanvas.
+
+---
+
+### 3. SPESIFIKASI TEMA WARNA (DARK TECH THEME — WAJIB KONSISTEN DI SEMUA SCENE)
+Ganti seluruh palet warna latar terang/krem di semua scene agar menggunakan **Dark Tech Theme** berikut secara konsisten:
+
+```javascript
+const K = {
+  bg:   '#0e1626', // Warna latar utama kanvas (Deep Dark Navy)
+  bg2:  '#13203a', // Warna lingkaran dekoratif sudut latar (Subtle Navy Glow)
+  ink:  '#172235', // Warna isi kartu/panel/gedung gelap (Dark Slate Ink)
+  surf: '#22314d', // Warna permukaan kartu sekunder, border panel, & track bar
+  iv:   '#F6F5EE', // Warna teks utama & elemen terang (Warm Ivory White)
+  cob:  '#4667FF', // Aksen utama biru Kubernetes (Cobalt Blue)
+  teal: '#16B99A', // Aksen sukses / Pod sehat / kapasitas bersih (Teal Green)
+  cor:  '#FF765E', // Aksen peringatan / sorotan penting / atap (Coral Orange)
+  amb:  '#FFC65C', // Aksen sorotan sekunder / badge / partikel aktif (Amber Gold)
+  peri: '#A3A5F4', // Aksen teks subjudul / garis konektor sekunder (Periwinkle)
+  sl:   '#73819A', // Warna teks/elemen nonaktif atau redup (Muted Slate)
+  red:  '#E5484D', // Warna error / bahaya / crash (Crimson Red)
+  wh:   '#FFFFFF'  // Putih murni
+};
+```
+
+- **Latar Belakang Kanvas (`drawThemeBg`) di Setiap Scene:**
+  - Isi seluruh kanvas `(0, 0, 1080, 1920)` dengan `K.bg` (`#0e1626`).
+  - Gambar 2 lingkaran dekoratif lembut berwarna `K.bg2` (`#13203a`):
+    1. Pusat `(980, 160)`, radius `300`.
+    2. Pusat `(60, 1800)`, radius `360`.
+- **Teks & Kartu:**
+  - Seluruh teks judul/utama yang tadinya berwarna gelap (`#172235` / `#001531`) di atas latar terang **WAJIB** diubah menjadi `K.iv` (`#F6F5EE`) agar kontras di atas latar `#0e1626`.
+  - Namun, teks yang berada di atas *badge*/kartu berwarna terang (`K.amb` `#FFC65C` atau `K.iv` `#F6F5EE`) tetap menggunakan warna gelap `K.ink` (`#172235`) agar terbaca jelas.
+- **Kotak Subtitle (`drawSubtitleOverlay`):**
+  - Kotak kapsul di bagian bawah kanvas (`x = 60`, `w = 960`, `r = 28`) dengan fill `#000000` (`alpha = 0.68`), stroke `K.surf` (`#22314d`, `lineWidth = 2`), dan teks `K.iv` (`#F6F5EE`, `600 38px Inter, system-ui, sans-serif`, rata tengah di `x = 540`).
+- **Tema Halaman Pembungkus HTML (CSS):**
+  - `body`: `background: #0b1220; color: #F6F5EE; font-family: Inter, system-ui, sans-serif;`
+  - `canvas`: `background: #0e1626; border-radius: 14px; box-shadow: 0 10px 32px rgba(0,0,0,.45);`
+  - Tombol utama: `#4667FF`, tombol sekunder (`.g`): `#22314d`, tombol scene aktif (`.act`): `#16B99A` dengan teks `#0b1220`.
+
+---
+
+### 4. JEDA BACA 2 DETIK SEBELUM TRANSISI (`SCENE_DELAY = 2.0`)
+1. Berikan jeda **`SCENE_DELAY = 2.0` detik** setelah durasi voiceover tiap scene selesai sebelum berpindah ke scene berikutnya:
+   - `DURS[i] = VO_DURS[i] + 2.0`
+2. Selama rentang jeda 2 detik tersebut (`VO_DURS[i] <= localT < VO_DURS[i] + 2.0`):
+   - Tahan (*clamp*) *timeline* struktural scene pada posisi akhir (`tClamped = Math.min(localT, VO_DURS[i] - 0.001)`) agar diagram/teks akhir tetap utuh di layar dan nyaman dibaca.
+   - Biarkan animasi *ambient* (seperti partikel mengalir atau gerakan napas karakter) dan musik latar tetap berjalan halus.
+   - Perpanjang tampilan *cue* subtitle terakhir di setiap scene selama `+1.8 detik` ke dalam waktu jeda tersebut.
+3. Di dalam masing-masing sub-scene internal, pastikan animasi masuk (*entrance*) teks dan diagram selesai sekitar `1.5 - 2.0 detik` sebelum sub-scene berganti agar tidak terkesan terburu-buru.
+
+---
+
+### 5. IKON KUBERNETES & OUTRO PENUTUP (`alifpustaka-logo-reveal.html`)
+1. Jika ada bagian yang menampilkan ikon Kubernetes, gunakan path vektor asli dari `kubernetes-icon.svg` (`Path2D` dengan heptagon `#326ce5` dan roda kemudi `#ffffff`).
+2. Tambahkan animasi dari file `alifpustaka-logo-reveal.html` di bagian paling akhir video (setelah scene terakhir + jeda 2 detik) sebagai **Outro** berdurasi `4.0 + 2.0 = 6.0 detik`:
+   - Gunakan seluruh path SVG asli logo (`10 path` warna asli) dan wordmark *"alifpustaka"* (`11 path` dengan warna `K.iv` `#F6F5EE`), partikel, cincin, *typewriter* `"Ruang Literasi, Rumah Inovasi"`, dan kapsul URL `https://alifpustaka.web.id` di atas latar belakang `drawThemeBg` (`#0e1626`).

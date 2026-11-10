@@ -1,0 +1,41 @@
+00:00.600 --> 00:03.150
+Bagaimana siklus tool calling ini bekerja di balik layar?
+
+00:03.880 --> 00:06.600
+Semua berjalan lewat empat tahap presisi.
+
+00:07.380 --> 00:09.050
+Pertama, tahap reasoning,
+
+00:09.280 --> 00:13.200
+di mana AI sadar bahwa ia butuh data eksternal untuk menjawab pertanyaanmu.
+
+00:13.900 --> 00:15.950
+Kedua, tool call emission.
+
+00:16.280 --> 00:18.500
+AI menahan diri untuk tidak mengarang jawaban,
+
+00:18.600 --> 00:20.850
+lalu mengeluarkan instruksi JSON terstruktur,
+
+00:20.980 --> 00:24.400
+seperti memanggil fungsi pencarian laporan tahun 2025.
+
+00:25.000 --> 00:27.000
+Ketiga, retrieval execution.
+
+00:27.280 --> 00:29.800
+Mikroservis backend kita menangkap instruksi itu,
+
+00:29.950 --> 00:33.600
+memindai database vektor, lalu mengembalikan potongan teks faktanya.
+
+00:34.200 --> 00:36.400
+Keempat, grounded synthesis.
+
+00:36.650 --> 00:38.300
+AI membaca hasil tangkapan tadi,
+
+00:38.380 --> 00:40.700
+lalu merangkai jawaban akurat lengkap dengan nomor halaman rujukan.
