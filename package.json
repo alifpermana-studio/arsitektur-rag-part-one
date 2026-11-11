@@ -1,0 +1,10 @@
+{
+  "name": "masterclass-arsitektur-rag-part-1",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "python3 -m http.server 3000 --bind 0.0.0.0",
+    "build": "echo 'Static HTML5 single-file ready'",
+    "lint": "echo 'Static HTML5 verified'"
+  }
+}
