@@ -1,23 +1,95 @@
-00:00.120 --> 00:04.850
-Mekanisme persis inilah yang menggerakkan fitur Projects dan protokol MCP di Claude,
+00:00.120 --> 00:01.450
+Mekanisme persis inilah
 
-00:04.980 --> 00:08.680
-Extensions di Gemini, hingga File Search di ChatGPT.
+00:01.450 --> 00:02.440
+yang menggerakkan
 
-00:09.650 --> 00:12.650
-Fakta arsitektural ini membuka satu rahasia besar.
+00:02.440 --> 00:03.000
+fitur Projects
 
-00:13.350 --> 00:15.150
-Secerdas apa pun model penalaran yang kita pakai,
+00:03.000 --> 00:04.380
+dan protokol MCP
 
-00:15.250 --> 00:18.450
-mau itu Claude Sonnet, Gemini Pro, atau DeepSeek R1,
+00:04.380 --> 00:04.850
+di Claude,
 
-00:18.750 --> 00:24.100
-kualitas jawabannya bergantung 100% pada kualitas potongan dokumen yang disodorkan oleh alat RAG kita.
+00:04.980 --> 00:06.690
+Extensions di Gemini,
 
-00:25.150 --> 00:27.950
-Kalau mesin pencari di back-end menyuapi potongan dokumen yang salah,
+00:06.690 --> 00:08.130
+hingga File Search
 
-00:28.250 --> 00:32.850
-maka AI paling pintar di dunia sekali pun pasti akan ikut memberikan jawaban yang sesat.
+00:08.130 --> 00:08.680
+di ChatGPT.
+
+00:09.650 --> 00:11.080
+Fakta arsitektural ini
+
+00:11.080 --> 00:11.860
+membuka satu
+
+00:11.860 --> 00:12.650
+rahasia besar.
+
+00:13.350 --> 00:13.920
+Secerdas apa pun
+
+00:13.920 --> 00:14.540
+model penalaran
+
+00:14.540 --> 00:15.150
+yang kita pakai,
+
+00:15.250 --> 00:16.780
+mau itu Claude Sonnet,
+
+00:16.780 --> 00:17.600
+Gemini Pro,
+
+00:17.600 --> 00:18.450
+atau DeepSeek R1,
+
+00:18.750 --> 00:19.800
+kualitas jawabannya
+
+00:19.800 --> 00:20.430
+bergantung 100%
+
+00:20.430 --> 00:21.110
+pada kualitas
+
+00:21.110 --> 00:21.950
+potongan dokumen
+
+00:21.950 --> 00:22.930
+yang disodorkan
+
+00:22.930 --> 00:24.100
+oleh alat RAG kita.
+
+00:25.150 --> 00:25.920
+Kalau mesin pencari
+
+00:25.920 --> 00:26.820
+di back-end menyuapi
+
+00:26.820 --> 00:27.350
+potongan dokumen
+
+00:27.350 --> 00:27.950
+yang salah,
+
+00:28.250 --> 00:29.390
+maka AI paling pintar
+
+00:29.390 --> 00:30.330
+di dunia sekali pun
+
+00:30.330 --> 00:31.340
+pasti akan ikut
+
+00:31.340 --> 00:32.390
+memberikan jawaban
+
+00:32.390 --> 00:32.850
+yang sesat.

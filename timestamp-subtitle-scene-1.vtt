@@ -1,41 +1,95 @@
 00:00.200 --> 00:01.300
 Pernah kepikiran nggak,
 
-00:01.350 --> 00:05.350
-kok bisa platform seperti Claude, Gemini, atau ChatGPT
+00:01.350 --> 00:02.610
+kok bisa platform
 
-00:05.400 --> 00:08.300
-langsung paham isi laporan PDF rahasia perusahaanmu
+00:02.610 --> 00:04.680
+seperti Claude, Gemini,
 
-00:08.300 --> 00:10.600
-hanya dalam hitungan detik setelah diunggah?
+00:04.680 --> 00:05.350
+atau ChatGPT
 
-00:11.600 --> 00:15.300
-Padahal, otak model AI itu punya batas ingatan pelatihan
+00:05.400 --> 00:06.360
+langsung paham isi
 
-00:15.350 --> 00:18.000
-dan sama sekali buta terhadap data internal kita.
+00:06.360 --> 00:07.650
+laporan PDF rahasia
 
-00:18.800 --> 00:21.000
-Kalau kita melatih ulang model atau fine-tuning,
+00:07.650 --> 00:08.300
+perusahaanmu
 
-00:21.050 --> 00:24.100
-itu ibarat menyuruh mahasiswa menghafal seluruh isi perpustakaan
+00:08.300 --> 00:09.810
+hanya dalam hitungan detik
 
-00:24.150 --> 00:25.850
-sebelum masuk ruang ujian tertutup.
+00:09.810 --> 00:10.600
+setelah diunggah?
 
-00:26.100 --> 00:28.000
-Biayanya mahal dan rawan salah ingat.
+00:11.600 --> 00:13.570
+Padahal, otak model AI itu
+
+00:13.570 --> 00:14.140
+punya batas
+
+00:14.140 --> 00:15.300
+ingatan pelatihan
+
+00:15.350 --> 00:16.480
+dan sama sekali buta
+
+00:16.480 --> 00:17.120
+terhadap data
+
+00:17.120 --> 00:18.000
+internal kita.
+
+00:18.800 --> 00:19.860
+Kalau kita melatih ulang
+
+00:19.860 --> 00:21.000
+model atau fine-tuning,
+
+00:21.050 --> 00:22.080
+itu ibarat menyuruh
+
+00:22.080 --> 00:22.880
+mahasiswa menghafal
+
+00:22.880 --> 00:24.100
+seluruh isi perpustakaan
+
+00:24.150 --> 00:24.810
+sebelum masuk
+
+00:24.810 --> 00:25.850
+ruang ujian tertutup.
+
+00:26.100 --> 00:27.000
+Biayanya mahal
+
+00:27.000 --> 00:28.000
+dan rawan salah ingat.
 
 00:28.400 --> 00:30.500
 Solusinya adalah RAG
 
-00:30.800 --> 00:33.500
-atau Retrieval-Augmented Generation,
+00:30.800 --> 00:32.450
+atau Retrieval-Augmented
 
-00:33.800 --> 00:36.500
-yang mengubah ujian tadi menjadi ujian buku terbuka
+00:32.450 --> 00:33.500
+Generation,
 
-00:36.550 --> 00:39.000
-berbekal indeks pencarian super cepat.
+00:33.800 --> 00:34.950
+yang mengubah ujian tadi
+
+00:34.950 --> 00:35.710
+menjadi ujian
+
+00:35.710 --> 00:36.500
+buku terbuka
+
+00:36.550 --> 00:38.300
+berbekal indeks pencarian
+
+00:38.300 --> 00:39.000
+super cepat.

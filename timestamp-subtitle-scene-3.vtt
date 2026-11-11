@@ -1,41 +1,104 @@
-00:00.600 --> 00:03.150
-Bagaimana siklus tool calling ini bekerja di balik layar?
+00:00.600 --> 00:01.410
+Bagaimana siklus
 
-00:03.880 --> 00:06.600
-Semua berjalan lewat empat tahap presisi.
+00:01.410 --> 00:02.010
+tool calling ini
+
+00:02.010 --> 00:03.150
+bekerja di balik layar?
+
+00:03.880 --> 00:05.250
+Semua berjalan lewat
+
+00:05.250 --> 00:06.600
+empat tahap presisi.
 
 00:07.380 --> 00:09.050
 Pertama, tahap reasoning,
 
-00:09.280 --> 00:13.200
-di mana AI sadar bahwa ia butuh data eksternal untuk menjawab pertanyaanmu.
+00:09.280 --> 00:10.730
+di mana AI sadar bahwa ia
+
+00:10.730 --> 00:11.810
+butuh data eksternal
+
+00:11.810 --> 00:12.670
+untuk menjawab
+
+00:12.670 --> 00:13.200
+pertanyaanmu.
 
 00:13.900 --> 00:15.950
 Kedua, tool call emission.
 
-00:16.280 --> 00:18.500
-AI menahan diri untuk tidak mengarang jawaban,
+00:16.280 --> 00:17.040
+AI menahan diri
 
-00:18.600 --> 00:20.850
-lalu mengeluarkan instruksi JSON terstruktur,
+00:17.040 --> 00:17.680
+untuk tidak
 
-00:20.980 --> 00:24.400
-seperti memanggil fungsi pencarian laporan tahun 2025.
+00:17.680 --> 00:18.500
+mengarang jawaban,
 
-00:25.000 --> 00:27.000
-Ketiga, retrieval execution.
+00:18.600 --> 00:19.570
+lalu mengeluarkan
 
-00:27.280 --> 00:29.800
-Mikroservis backend kita menangkap instruksi itu,
+00:19.570 --> 00:20.390
+instruksi JSON
 
-00:29.950 --> 00:33.600
-memindai database vektor, lalu mengembalikan potongan teks faktanya.
+00:20.390 --> 00:20.850
+terstruktur,
 
-00:34.200 --> 00:36.400
-Keempat, grounded synthesis.
+00:20.980 --> 00:22.220
+seperti memanggil fungsi
 
-00:36.650 --> 00:38.300
-AI membaca hasil tangkapan tadi,
+00:22.220 --> 00:22.920
+pencarian laporan
 
-00:38.380 --> 00:40.700
-lalu merangkai jawaban akurat lengkap dengan nomor halaman rujukan.
+00:22.920 --> 00:24.400
+tahun 2025.
+
+00:25.000 --> 00:25.770
+Ketiga,
+
+00:25.770 --> 00:27.000
+retrieval execution.
+
+00:27.280 --> 00:28.570
+Mikroservis backend kita
+
+00:28.570 --> 00:29.800
+menangkap instruksi itu,
+
+00:29.950 --> 00:31.520
+memindai database vektor,
+
+00:31.520 --> 00:32.480
+lalu mengembalikan
+
+00:32.480 --> 00:33.600
+potongan teks faktanya.
+
+00:34.200 --> 00:35.000
+Keempat,
+
+00:35.000 --> 00:36.400
+grounded synthesis.
+
+00:36.650 --> 00:37.330
+AI membaca
+
+00:37.330 --> 00:38.300
+hasil tangkapan tadi,
+
+00:38.380 --> 00:38.990
+lalu merangkai
+
+00:38.990 --> 00:39.580
+jawaban akurat
+
+00:39.580 --> 00:40.000
+lengkap dengan
+
+00:40.000 --> 00:40.700
+nomor halaman rujukan.

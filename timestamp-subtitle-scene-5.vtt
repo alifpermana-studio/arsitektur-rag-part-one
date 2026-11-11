@@ -1,29 +1,95 @@
-00:00.250 --> 00:05.750
-Sayangnya, saat developer mencoba membuat sendiri alat RAG ini dengan cara dasar atau Naive RAG,
+00:00.250 --> 00:01.620
+Sayangnya, saat developer
 
-00:05.900 --> 00:08.400
-dua bencana besar langsung mengintai.
+00:01.620 --> 00:02.730
+mencoba membuat sendiri
 
-00:08.750 --> 00:11.500
-Bencana pertama adalah amnesia konteks.
+00:02.730 --> 00:03.650
+alat RAG ini
 
-00:12.100 --> 00:15.200
-Demi memotong dokumen panjang menjadi bagian kecil atau chunking,
+00:03.650 --> 00:04.660
+dengan cara dasar
 
-00:15.400 --> 00:19.700
-banyak developer langsung memotong teks mentah-mentah tanpa menyertakan identitas dokumennya.
+00:04.660 --> 00:05.750
+atau Naive RAG,
 
-00:20.350 --> 00:24.000
-Bayangkan merobek ratusan halaman laporan keuangan dari berbagai tahun,
+00:05.900 --> 00:07.160
+dua bencana besar
 
-00:24.100 --> 00:26.500
-lalu mengacaknya di satu kardus.
+00:07.160 --> 00:08.400
+langsung mengintai.
 
-00:27.200 --> 00:30.300
-Saat AI mencari laba tahun 2025,
+00:08.750 --> 00:10.300
+Bencana pertama adalah
 
-00:30.400 --> 00:35.300
-mesin pencari malah mengambil robekan kertas bertuliskan laba naik 18% di kuartal ketiga,
+00:10.300 --> 00:11.500
+amnesia konteks.
 
-00:35.450 --> 00:38.300
-yang ternyata berasal dari laporan tahun 2021.
+00:12.100 --> 00:12.800
+Demi memotong
+
+00:12.800 --> 00:13.500
+dokumen panjang
+
+00:13.500 --> 00:14.590
+menjadi bagian kecil
+
+00:14.590 --> 00:15.200
+atau chunking,
+
+00:15.400 --> 00:16.500
+banyak developer langsung
+
+00:16.500 --> 00:17.080
+memotong teks
+
+00:17.080 --> 00:17.820
+mentah-mentah
+
+00:17.820 --> 00:18.520
+tanpa menyertakan
+
+00:18.520 --> 00:19.700
+identitas dokumennya.
+
+00:20.350 --> 00:21.250
+Bayangkan merobek
+
+00:21.250 --> 00:22.040
+ratusan halaman
+
+00:22.040 --> 00:22.780
+laporan keuangan
+
+00:22.780 --> 00:24.000
+dari berbagai tahun,
+
+00:24.100 --> 00:25.290
+lalu mengacaknya
+
+00:25.290 --> 00:26.500
+di satu kardus.
+
+00:27.200 --> 00:28.200
+Saat AI mencari
+
+00:28.200 --> 00:30.300
+laba tahun 2025,
+
+00:30.400 --> 00:31.650
+mesin pencari malah
+
+00:31.650 --> 00:32.940
+mengambil robekan kertas
+
+00:32.940 --> 00:34.040
+bertuliskan laba naik 18%
+
+00:34.040 --> 00:35.300
+di kuartal ketiga,
+
+00:35.450 --> 00:36.300
+yang ternyata berasal
+
+00:36.300 --> 00:38.300
+dari laporan tahun 2021.

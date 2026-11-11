@@ -1,8 +1,17 @@
-00:00.670 --> 00:03.450
-Sekarang, cetak biru production RAG kita sudah jelas.
+00:00.670 --> 00:01.910
+Sekarang, cetak biru
 
-00:04.050 --> 00:06.180
-Kita butuh kontainer terpisah
+00:01.910 --> 00:02.850
+production RAG kita
+
+00:02.850 --> 00:03.450
+sudah jelas.
+
+00:04.050 --> 00:04.830
+Kita butuh
+
+00:04.830 --> 00:06.180
+kontainer terpisah
 
 00:06.180 --> 00:07.820
 untuk antarmuka Next.js,
@@ -13,29 +22,59 @@ orkestrator Express.js,
 00:09.920 --> 00:11.830
 antrean dan cache Redis,
 
-00:11.830 --> 00:14.360
-database PostgreSQL pgvector,
+00:11.830 --> 00:13.520
+database PostgreSQL
+
+00:13.520 --> 00:14.360
+pgvector,
 
 00:14.650 --> 00:16.140
 serta reverse proxy.
 
-00:17.150 --> 00:19.460
-Tapi masalah baru langsung muncul di depan mata:
+00:17.150 --> 00:17.950
+Tapi masalah baru
 
-00:20.180 --> 00:23.230
-Bagaimana cara menjalankan kelima layanan mikroservis ini
+00:17.950 --> 00:18.550
+langsung muncul
 
-00:23.230 --> 00:26.060
-di dalam satu VPS murah berkapasitas 4 GB RAM
+00:18.550 --> 00:19.460
+di depan mata:
 
-00:26.060 --> 00:28.460
-tanpa mati mendadak karena kehabisan memori?
+00:20.180 --> 00:21.650
+Bagaimana cara menjalankan
 
-00:29.470 --> 00:31.910
-Di bagian kedua, kita akan bedah tuntas
+00:21.650 --> 00:22.300
+kelima layanan
 
-00:31.910 --> 00:34.200
-topologi Docker Compose dan strategi pembagian RAM-nya
+00:22.300 --> 00:23.230
+mikroservis ini
+
+00:23.230 --> 00:24.550
+di dalam satu VPS murah
+
+00:24.550 --> 00:26.060
+berkapasitas 4 GB RAM
+
+00:26.060 --> 00:27.080
+tanpa mati mendadak
+
+00:27.080 --> 00:28.460
+karena kehabisan memori?
+
+00:29.470 --> 00:30.520
+Di bagian kedua,
+
+00:30.520 --> 00:31.910
+kita akan bedah tuntas
+
+00:31.910 --> 00:32.980
+topologi Docker Compose
+
+00:32.980 --> 00:33.570
+dan strategi
+
+00:33.570 --> 00:34.200
+pembagian RAM-nya
 
 00:34.200 --> 00:35.800
 agar server tetap dingin.

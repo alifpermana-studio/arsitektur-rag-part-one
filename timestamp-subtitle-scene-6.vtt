@@ -1,8 +1,17 @@
-00:00.800 --> 00:04.650
-Bencana kedua menghantam langsung ke jantung infrastruktur server.
+00:00.800 --> 00:02.330
+Bencana kedua menghantam
 
-00:05.600 --> 00:07.800
-Banyak yang menggabungkan proses unggah berkas PDF,
+00:02.330 --> 00:03.350
+langsung ke jantung
+
+00:03.350 --> 00:04.650
+infrastruktur server.
+
+00:05.600 --> 00:06.710
+Banyak yang menggabungkan
+
+00:06.710 --> 00:07.800
+proses unggah berkas PDF,
 
 00:07.850 --> 00:09.050
 ekstraksi teks,
@@ -10,23 +19,65 @@ ekstraksi teks,
 00:09.150 --> 00:10.450
 pembuatan vektor,
 
-00:10.550 --> 00:14.000
-hingga jalur tool calling di dalam satu aplikasi Node.js monolitik.
+00:10.550 --> 00:11.640
+hingga jalur tool calling
 
-00:14.650 --> 00:19.100
-Padahal, membongkar PDF ratusan halaman itu sangat rakus CPU.
+00:11.640 --> 00:12.990
+di dalam satu aplikasi
 
-00:19.850 --> 00:22.000
-Begitu ada lima pengguna mengunggah dokumen bersamaan,
+00:12.990 --> 00:14.000
+Node.js monolitik.
 
-00:22.100 --> 00:25.200
-jalur tunggal event loop di server langsung terkunci rapat.
+00:14.650 --> 00:16.430
+Padahal, membongkar PDF
 
-00:25.950 --> 00:30.300
-Akibatnya, saat agen AI milik pengguna lain mencoba memanggil tool pencarian database,
+00:16.430 --> 00:18.010
+ratusan halaman itu
 
-00:30.750 --> 00:33.650
-permintaan mereka menabrak pintu server yang membeku
+00:18.010 --> 00:19.100
+sangat rakus CPU.
 
-00:33.750 --> 00:36.050
-dan berakhir dengan layar merah Gateway Timeout.
+00:19.850 --> 00:20.930
+Begitu ada lima pengguna
+
+00:20.930 --> 00:21.530
+mengunggah dokumen
+
+00:21.530 --> 00:22.000
+bersamaan,
+
+00:22.100 --> 00:23.480
+jalur tunggal event loop
+
+00:23.480 --> 00:24.000
+di server
+
+00:24.000 --> 00:25.200
+langsung terkunci rapat.
+
+00:25.950 --> 00:27.270
+Akibatnya, saat agen AI
+
+00:27.270 --> 00:28.170
+milik pengguna lain
+
+00:28.170 --> 00:29.090
+mencoba memanggil
+
+00:29.090 --> 00:30.300
+tool pencarian database,
+
+00:30.750 --> 00:32.170
+permintaan mereka menabrak
+
+00:32.170 --> 00:33.650
+pintu server yang membeku
+
+00:33.750 --> 00:34.540
+dan berakhir dengan
+
+00:34.540 --> 00:35.180
+layar merah
+
+00:35.180 --> 00:36.050
+Gateway Timeout.

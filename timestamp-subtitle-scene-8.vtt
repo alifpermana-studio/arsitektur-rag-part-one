@@ -1,20 +1,86 @@
-00:00.080 --> 00:05.500
-Perbedaan kedua arsitektur ini terlihat kontras saat kita uji di atas simulasi lalu lintas data.
+00:00.080 --> 00:00.950
+Perbedaan kedua
 
-00:07.100 --> 00:12.350
-Pada mode Naive RAG, panggilan fungsi dari agen AI langsung tersendat oleh antrean unggah berkas,
+00:00.950 --> 00:01.820
+arsitektur ini
 
-00:12.350 --> 00:17.400
-dan hanya memulangkan potongan kalimat buta tanpa keterangan tahun, sehingga memicu halusinasi.
+00:01.820 --> 00:02.780
+terlihat kontras
 
-00:18.000 --> 00:21.800
-Sebaliknya, saat kita beralih ke mode Production RAG,
+00:02.780 --> 00:03.910
+saat kita uji di atas
 
-00:22.350 --> 00:25.300
-Express.js langsung menembus jalur bebas hambatan,
+00:03.910 --> 00:05.500
+simulasi lalu lintas data.
 
-00:25.400 --> 00:30.900
-menyaring atribut metadata tahun 2025 secara instan di indeks GIN PostgreSQL,
+00:07.100 --> 00:08.500
+Pada mode Naive RAG,
 
-00:31.450 --> 00:36.100
-lalu memulangkan kutipan utuh lengkap dengan konteks bab dan nomor halaman hanya dalam 25 milidetik.
+00:08.500 --> 00:09.290
+panggilan fungsi
+
+00:09.290 --> 00:09.990
+dari agen AI
+
+00:09.990 --> 00:10.820
+langsung tersendat
+
+00:10.820 --> 00:12.350
+oleh antrean unggah berkas,
+
+00:12.350 --> 00:13.540
+dan hanya memulangkan
+
+00:13.540 --> 00:14.640
+potongan kalimat buta
+
+00:14.640 --> 00:15.690
+tanpa keterangan tahun,
+
+00:15.690 --> 00:16.660
+sehingga memicu
+
+00:16.660 --> 00:17.400
+halusinasi.
+
+00:18.000 --> 00:19.410
+Sebaliknya, saat kita
+
+00:19.410 --> 00:20.650
+beralih ke mode
+
+00:20.650 --> 00:21.800
+Production RAG,
+
+00:22.350 --> 00:23.130
+Express.js langsung
+
+00:23.130 --> 00:24.200
+menembus jalur
+
+00:24.200 --> 00:25.300
+bebas hambatan,
+
+00:25.400 --> 00:26.990
+menyaring atribut metadata
+
+00:26.990 --> 00:29.570
+tahun 2025 secara instan
+
+00:29.570 --> 00:30.900
+di indeks GIN PostgreSQL,
+
+00:31.450 --> 00:32.180
+lalu memulangkan
+
+00:32.180 --> 00:33.110
+kutipan utuh lengkap
+
+00:33.110 --> 00:33.710
+dengan konteks bab
+
+00:33.710 --> 00:34.380
+dan nomor halaman
+
+00:34.380 --> 00:36.100
+hanya dalam 25 milidetik.

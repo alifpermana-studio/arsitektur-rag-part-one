@@ -1,23 +1,89 @@
-00:00.300 --> 00:03.350
-Untuk membangun sistem RAG kelas produksi yang tahan banting,
+00:00.300 --> 00:01.840
+Untuk membangun sistem RAG
 
-00:03.700 --> 00:08.700
-kita wajib membuang arsitektur monolitik dan membelah sistem menjadi dua pipa microservice yang terisolasi.
+00:01.840 --> 00:02.350
+kelas produksi
 
-00:09.600 --> 00:13.100
-Pipa pertama adalah jalur ingestion asinkron di latar belakang,
+00:02.350 --> 00:03.350
+yang tahan banting,
 
-00:13.500 --> 00:17.400
-yang dikendalikan antrean Redis BullMQ dan pekerja Express.js
+00:03.700 --> 00:04.490
+kita wajib membuang
 
-00:17.600 --> 00:22.700
-untuk mengekstrak PDF, menyuntikkan konteks dokumen, serta melabeli metadata otomatis.
+00:04.490 --> 00:05.590
+arsitektur monolitik
 
-00:23.600 --> 00:26.900
-Pipa kedua adalah jalur kueri hibrida berkecepatan tinggi,
+00:05.590 --> 00:06.280
+dan membelah sistem
 
-00:27.200 --> 00:31.700
-yang khusus melayani panggilan tool-calling lewat memori kilat semantic cache Redis,
+00:06.280 --> 00:07.200
+menjadi dua pipa
 
-00:31.900 --> 00:35.900
-serta pencarian gabungan kata kunci dan vektor di PostgreSQL pgvector.
+00:07.200 --> 00:07.900
+microservice
+
+00:07.900 --> 00:08.700
+yang terisolasi.
+
+00:09.600 --> 00:10.720
+Pipa pertama adalah
+
+00:10.720 --> 00:12.020
+jalur ingestion asinkron
+
+00:12.020 --> 00:13.100
+di latar belakang,
+
+00:13.500 --> 00:15.430
+yang dikendalikan antrean
+
+00:15.430 --> 00:16.150
+Redis BullMQ
+
+00:16.150 --> 00:17.400
+dan pekerja Express.js
+
+00:17.600 --> 00:19.020
+untuk mengekstrak PDF,
+
+00:19.020 --> 00:19.590
+menyuntikkan
+
+00:19.590 --> 00:20.560
+konteks dokumen,
+
+00:20.560 --> 00:21.490
+serta melabeli
+
+00:21.490 --> 00:22.700
+metadata otomatis.
+
+00:23.600 --> 00:24.570
+Pipa kedua adalah
+
+00:24.570 --> 00:25.770
+jalur kueri hibrida
+
+00:25.770 --> 00:26.900
+berkecepatan tinggi,
+
+00:27.200 --> 00:28.150
+yang khusus melayani
+
+00:28.150 --> 00:29.320
+panggilan tool-calling
+
+00:29.320 --> 00:30.400
+lewat memori kilat
+
+00:30.400 --> 00:31.700
+semantic cache Redis,
+
+00:31.900 --> 00:33.330
+serta pencarian gabungan
+
+00:33.330 --> 00:34.710
+kata kunci dan vektor
+
+00:34.710 --> 00:35.900
+di PostgreSQL pgvector.
